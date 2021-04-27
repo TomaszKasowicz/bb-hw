@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   template: `
     <header>
-      <img src="/assets/logo.jpg" />
+      <img src="./assets/logo.jpg" />
     </header>
   `,
   styles: [
