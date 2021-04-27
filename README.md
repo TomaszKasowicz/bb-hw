@@ -1,7 +1,7 @@
 # Homework
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 This is a Homework project.
+https://github.com/TomaszKasowicz/bb-hw
 
 ## Running Locally
 
