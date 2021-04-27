@@ -10,3 +10,7 @@ Run `npm start`
 ## Testing Locally
 
 Run `npm test`
+
+## Github Pages
+
+https://tomaszkasowicz.github.io/bb-hw/
