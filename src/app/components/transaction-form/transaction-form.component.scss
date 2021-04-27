@@ -1,0 +1,35 @@
+.transfer-form {
+  padding: 1em;
+  align-self: flex-start;
+
+  label,
+  input {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .amount {
+    width: 100%;
+
+    input {
+      padding-left: 15px;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: flex-end;
+
+    &:not:first-child {
+      margin-left: 1em;
+    }
+
+    button {
+      flex-basis: 10em;
+    }
+  }
+}
+
+.prefix {
+  position: absolute;
+}

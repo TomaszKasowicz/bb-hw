@@ -1,0 +1,2 @@
+<input class="flex-grow-1" type="text" [(ngModel)]="searchText" placeholder="Search By Typing" (keyup)="emitChange($event)">
+<button [class.hidden]="!searchText" (click)="clear()">X</button>
