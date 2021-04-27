@@ -9,7 +9,7 @@
   <div class="error" *ngIf="ctrlTo?.dirty && ctrlTo?.errors?.required">
     Benficiary is required.
   </div>
-  <input id="to" type="text" formControlName="to" list="merchants">
+  <input id="to" type="text" formControlName="to" list="merchants" autocomplete="off">
   <datalist id="merchants">
     <option *ngFor="let merchant of merchants$ | async">{{merchant}}</option>
   </datalist>
@@ -21,7 +21,7 @@
   </div>
   <div class="amount">
     <span class="prefix">$</span>    
-    <input id="amount" type="text" formControlName="amount" placeholder="0.00">
+    <input id="amount" type="text" formControlName="amount" placeholder="0.00" autocomplete="off">
   </div>
   <div class="flex buttons">
     <ng-container *ngIf="isReview === false; else review">
