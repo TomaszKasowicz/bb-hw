@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
 import { defer, Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { map, startWith, tap } from 'rxjs/operators';
 import { Transaction } from '../../model/transaction';
 import { TransactionsService } from '../../services/transactions.service';
 import { balanceValidator } from './balance.validator';
@@ -13,6 +19,8 @@ import { balanceValidator } from './balance.validator';
 })
 export class TransactionFormComponent implements OnInit {
   public transferForm: FormGroup;
+  public ctrlTo: AbstractControl | null;
+  public ctrlAmount: AbstractControl | null;
   public isReview: boolean;
 
   public disabled$: Observable<boolean>;
@@ -23,21 +31,24 @@ export class TransactionFormComponent implements OnInit {
     private transactionService: TransactionsService
   ) {
     this.transferForm = this.fb.group({
-      from: this.fb.control({ value: null, disabled: true }),
+      from: this.fb.control(null),
       to: this.fb.control(null, [Validators.required]),
       amount: this.fb.control(null, [
         Validators.required,
-        Validators.min(0),
+        Validators.pattern(/^\d+(\.\d{2})?$/),
         balanceValidator(this.transactionService)
       ])
     });
+    this.ctrlTo = this.transferForm.get('to');
+    this.ctrlAmount = this.transferForm.get('amount');
   }
 
   ngOnInit(): void {
     this.resetForm();
     this.disabled$ = defer(() => this.transferForm.statusChanges).pipe(
       map(status => status === 'INVALID'),
-      startWith(true)
+      startWith(true),
+      tap(() => console.log(this.transferForm.get('to')?.errors))
     );
 
     this.merchants$ = this.transactionService

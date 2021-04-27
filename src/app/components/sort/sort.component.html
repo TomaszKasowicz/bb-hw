@@ -5,7 +5,7 @@
 (click)="toggleSort(sortColumn.propertyName)"
 >
   <div class="flex">
-    <label>{{ sortColumn.label }}</label>    
+    <span>{{ sortColumn.label }}</span>    
     <div class="arrow" 
     [class.arrow-hidden]="sortColumn.propertyName !== state.property"
     [class.arrow-up]="state.ascending" 

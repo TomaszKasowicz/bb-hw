@@ -1,11 +1,11 @@
-.container {
-  font-size: 1em;
+:host {
   height: 7em;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  background-color: white;
-  border-bottom: 1px solid #999990;
+  border-right: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+
+  &:first-of-type {
+    border-top: 1px solid var(--color-line);
+  }
 }
 
 .category {
@@ -17,6 +17,10 @@
 .item {
   padding: 0;
   margin: 0em 1em;
+}
+
+.date {
+  flex-basis: 4em;
 }
 
 .details {

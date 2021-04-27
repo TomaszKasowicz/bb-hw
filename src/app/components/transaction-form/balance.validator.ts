@@ -10,7 +10,7 @@ export function balanceValidator(transactionsService: TransactionsService) {
     const newBalance = balance - amount;
 
     if (newBalance < MIN_BALANCE) {
-      return { 'balance-overdraft': true };
+      return { balanceOverdraft: true };
     }
     return null;
   };

@@ -70,8 +70,12 @@ button {
   margin-bottom: 1em;
 }
 
-.font {
-  &__bold {
-    font-weight: bold;
-  }
+.bold {
+  font-weight: bold;
+}
+
+.error {
+  font-size: 0.75em;
+  width: 100%;
+  color: var(--color-peachtree-orange);
 }

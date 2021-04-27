@@ -2,10 +2,14 @@
   padding: 1em;
   align-self: flex-start;
 
-  label,
-  input {
+  input,
+  label {
     width: 100%;
+  }
+
+  input {
     margin-bottom: 1em;
+    padding: 0.5em 0em;
   }
 
   .amount {
@@ -31,5 +35,6 @@
 }
 
 .prefix {
+  color: var(--color-text-disabled);
   position: absolute;
 }

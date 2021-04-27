@@ -2,18 +2,26 @@
   [icon]="'./assets/icons/arrows.png'">
   Make a Transfer
 </app-window-header>
-<div class="flex flex_column transfer-form" [formGroup]="transferForm">
-  <label class="font__bold" for="from">FROM ACCOUNT</label>
-  <input type="text" formControlName="from">
-  <label class="font__bold"for="to">TO ACCOUNT</label>
-  <input type="text" formControlName="to" list="merchants">
+<form class="flex flex_column transfer-form" [formGroup]="transferForm">
+  <label class="bold" for="from">FROM ACCOUNT</label>
+  <input id="from" type="text" formControlName="from">
+  <label class="bold"for="to">TO ACCOUNT</label>
+  <div class="error" *ngIf="ctrlTo?.dirty && ctrlTo.errors?.required">
+    Benficiary is required.
+  </div>
+  <input id="to" type="text" formControlName="to" list="merchants">
   <datalist id="merchants">
     <option *ngFor="let merchant of merchants$ | async">{{merchant}}</option>
   </datalist>
-  <label class="font__bold" for="amount">AMOUNT</label>
+  <label class="bold" for="amount">AMOUNT</label>
+  <div class="error" *ngIf="ctrlAmount?.dirty && ctrlAmount?.errors">
+    <div *ngIf="ctrlAmount?.errors?.required">Amount is required</div>
+    <div *ngIf="ctrlAmount?.errors?.pattern">Fixed number (ie 123 or 123.45)</div>
+    <div *ngIf="ctrlAmount?.errors?.balanceOverdraft">Will overdraft</div>
+  </div>
   <div class="amount">
     <span class="prefix">$</span>    
-    <input type="number" formControlName="amount">
+    <input id="amount" type="text" formControlName="amount" placeholder="0.00">
   </div>
   <div class="flex buttons">
     <ng-container *ngIf="isReview === false; else review">
@@ -26,5 +34,4 @@
       <button class="peachtree" (click)="toggleState()">CANCEL</button>
       <button class="peachtree" (click)="transfer()">TRANSFER</button>  
   </ng-template>
-  
-</div>
+</form>
