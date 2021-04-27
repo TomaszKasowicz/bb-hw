@@ -6,7 +6,7 @@
   <label class="bold" for="from">FROM ACCOUNT</label>
   <input id="from" type="text" formControlName="from">
   <label class="bold"for="to">TO ACCOUNT</label>
-  <div class="error" *ngIf="ctrlTo?.dirty && ctrlTo.errors?.required">
+  <div class="error" *ngIf="ctrlTo?.dirty && ctrlTo?.errors?.required">
     Benficiary is required.
   </div>
   <input id="to" type="text" formControlName="to" list="merchants">
