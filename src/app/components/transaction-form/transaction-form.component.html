@@ -6,7 +6,10 @@
   <label class="font__bold" for="from">FROM ACCOUNT</label>
   <input type="text" formControlName="from">
   <label class="font__bold"for="to">TO ACCOUNT</label>
-  <input type="text" formControlName="to">
+  <input type="text" formControlName="to" list="merchants">
+  <datalist id="merchants">
+    <option *ngFor="let merchant of merchants$ | async">{{merchant}}</option>
+  </datalist>
   <label class="font__bold" for="amount">AMOUNT</label>
   <div class="amount">
     <span class="prefix">$</span>    

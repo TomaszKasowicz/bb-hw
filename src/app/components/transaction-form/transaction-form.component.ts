@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { defer, Observable } from 'rxjs';
-import { map, startWith, tap } from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
 import { Transaction } from '../../model/transaction';
 import { TransactionsService } from '../../services/transactions.service';
 import { balanceValidator } from './balance.validator';
@@ -16,6 +16,7 @@ export class TransactionFormComponent implements OnInit {
   public isReview: boolean;
 
   public disabled$: Observable<boolean>;
+  public merchants$: Observable<string[]>;
 
   constructor(
     private fb: FormBuilder,
@@ -32,6 +33,18 @@ export class TransactionFormComponent implements OnInit {
     });
   }
 
+  ngOnInit(): void {
+    this.resetForm();
+    this.disabled$ = defer(() => this.transferForm.statusChanges).pipe(
+      map(status => status === 'INVALID'),
+      startWith(true)
+    );
+
+    this.merchants$ = this.transactionService
+      .getRecentTransactions()
+      .pipe(map(transactions => transactions.map(t => t.merchant)));
+  }
+
   private resetForm() {
     this.isReview = false;
     this.transferForm.reset({
@@ -41,15 +54,6 @@ export class TransactionFormComponent implements OnInit {
     });
     this.transferForm.enable();
     this.transferForm.get('from')?.disable();
-    // this.transferForm.updateValueAndValidity();
-  }
-
-  ngOnInit(): void {
-    this.resetForm();
-    this.disabled$ = defer(() => this.transferForm.statusChanges).pipe(
-      map(status => status === 'INVALID'),
-      startWith(true)
-    );
   }
 
   private getFromValue() {
