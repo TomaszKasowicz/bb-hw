@@ -1,0 +1,14 @@
+<label>
+  Sort By:
+</label>
+<button class="flex-grow-1" *ngFor="let sortColumn of sortColumns"
+(click)="toggleSort(sortColumn.propertyName)"
+>
+  <div class="flex">
+    <label>{{ sortColumn.label }}</label>    
+    <div class="arrow" 
+    [class.arrow-hidden]="sortColumn.propertyName !== state.property"
+    [class.arrow-up]="state.ascending" 
+    [class.arrow-down]="!state.ascending"></div>  
+  </div>
+</button>
