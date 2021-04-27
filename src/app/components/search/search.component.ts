@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   emitChange(event?: KeyboardEvent) {
-    if (event?.code === 'Escape') {
+    if (event?.key === 'Escape') {
       this.searchText = '';
     }
     this.searchTextChanged.emit(this.searchText);

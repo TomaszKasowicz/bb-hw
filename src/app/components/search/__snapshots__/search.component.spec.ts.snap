@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchComponent should apply hidden class to X button when searchText is empty 1`] = `
+<app-search
+  __ngContext__={[Function LRootView]}
+  searchTextChanged={[Function EventEmitter_]}
+>
+  <input
+    class="flex-grow-1 ng-untouched ng-pristine ng-valid"
+    placeholder="Search By Typing"
+    type="text"
+  /><button
+    class="hidden"
+  >
+    X
+  </button>
+</app-search>
+`;
+
+exports[`SearchComponent should emit change when input is filled 1`] = `
+<app-search
+  __ngContext__={[Function LRootView]}
+  searchText={[Function String]}
+  searchTextChanged={[Function EventEmitter_]}
+>
+  <input
+    class="flex-grow-1 ng-untouched ng-valid ng-dirty"
+    placeholder="Search By Typing"
+    type="text"
+  /><button>
+    X
+  </button>
+</app-search>
+`;
+
+exports[`SearchComponent should show X button when searchText is not falsy 1`] = `
+<app-search
+  __ngContext__={[Function LRootView]}
+  searchText={[Function String]}
+  searchTextChanged={[Function EventEmitter_]}
+>
+  <input
+    class="flex-grow-1 ng-untouched ng-pristine ng-valid"
+    placeholder="Search By Typing"
+    type="text"
+  /><button>
+    X
+  </button>
+</app-search>
+`;

@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators
 } from '@angular/forms';
 import { defer, Observable } from 'rxjs';
-import { map, startWith, tap } from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
 import { Transaction } from '../../model/transaction';
 import { TransactionsService } from '../../services/transactions.service';
 import { balanceValidator } from './balance.validator';
@@ -47,8 +46,7 @@ export class TransactionFormComponent implements OnInit {
     this.resetForm();
     this.disabled$ = defer(() => this.transferForm.statusChanges).pipe(
       map(status => status === 'INVALID'),
-      startWith(true),
-      tap(() => console.log(this.transferForm.get('to')?.errors))
+      startWith(true)
     );
 
     this.merchants$ = this.transactionService
@@ -85,7 +83,7 @@ export class TransactionFormComponent implements OnInit {
   transfer() {
     const value = this.transferForm.getRawValue();
     const transaction: Transaction = {
-      amount: value.amount,
+      amount: +value.amount,
       categoryCode: '#1180aa',
       merchant: value.to,
       transactionType: 'Transaction',

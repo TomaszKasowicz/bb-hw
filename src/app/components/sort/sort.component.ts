@@ -34,7 +34,6 @@ export class SortComponent implements OnInit {
         ? { ...this.state, ascending: !this.state.ascending }
         : { ...this.state, property };
     this.state = newState;
-    console.log(newState);
     this.sortChange.emit(this.state);
   }
 }

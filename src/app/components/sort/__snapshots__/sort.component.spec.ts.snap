@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortComponent Should set sorting by Date by default 1`] = `
+<app-sort
+  __ngContext__={[Function LRootView]}
+  sortChange={[Function EventEmitter_]}
+  sortColumns={[Function Array]}
+  state={[Function Object]}
+>
+  <label>
+     Sort By:
+  
+  </label><button
+    class="flex-grow-1"
+    data-testid="button-for-DATE"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        DATE
+      </span>
+      <div
+        class="arrow arrow-down"
+        data-testid="arrow-for-DATE"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-BENEFICIARY"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        BENEFICIARY
+      </span>
+      <div
+        class="arrow arrow-hidden arrow-down"
+        data-testid="arrow-for-BENEFICIARY"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-AMOUNT"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        AMOUNT
+      </span>
+      <div
+        class="arrow arrow-hidden arrow-down"
+        data-testid="arrow-for-AMOUNT"
+      />
+    </div>
+  </button>
+</app-sort>
+`;
+
+exports[`SortComponent Should toggle sorting by Amount when button clicked 1`] = `
+<app-sort
+  __ngContext__={[Function LRootView]}
+  sortChange={[Function EventEmitter_]}
+  sortColumns={[Function Array]}
+  state={[Function Object]}
+>
+  <label>
+     Sort By:
+  
+  </label><button
+    class="flex-grow-1"
+    data-testid="button-for-DATE"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        DATE
+      </span>
+      <div
+        class="arrow arrow-down arrow-hidden"
+        data-testid="arrow-for-DATE"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-BENEFICIARY"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        BENEFICIARY
+      </span>
+      <div
+        class="arrow arrow-hidden arrow-down"
+        data-testid="arrow-for-BENEFICIARY"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-AMOUNT"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        AMOUNT
+      </span>
+      <div
+        class="arrow arrow-down"
+        data-testid="arrow-for-AMOUNT"
+      />
+    </div>
+  </button>
+</app-sort>
+`;
+
+exports[`SortComponent Should toggle sorting by Beneficiary when button clicked 1`] = `
+<app-sort
+  __ngContext__={[Function LRootView]}
+  sortChange={[Function EventEmitter_]}
+  sortColumns={[Function Array]}
+  state={[Function Object]}
+>
+  <label>
+     Sort By:
+  
+  </label><button
+    class="flex-grow-1"
+    data-testid="button-for-DATE"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        DATE
+      </span>
+      <div
+        class="arrow arrow-down arrow-hidden"
+        data-testid="arrow-for-DATE"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-BENEFICIARY"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        BENEFICIARY
+      </span>
+      <div
+        class="arrow arrow-down"
+        data-testid="arrow-for-BENEFICIARY"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-AMOUNT"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        AMOUNT
+      </span>
+      <div
+        class="arrow arrow-hidden arrow-down"
+        data-testid="arrow-for-AMOUNT"
+      />
+    </div>
+  </button>
+</app-sort>
+`;
+
+exports[`SortComponent Should toggle sorting by Date to descending when button clicked 1`] = `
+<app-sort
+  __ngContext__={[Function LRootView]}
+  sortChange={[Function EventEmitter_]}
+  sortColumns={[Function Array]}
+  state={[Function Object]}
+>
+  <label>
+     Sort By:
+  
+  </label><button
+    class="flex-grow-1"
+    data-testid="button-for-DATE"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        DATE
+      </span>
+      <div
+        class="arrow arrow-up"
+        data-testid="arrow-for-DATE"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-BENEFICIARY"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        BENEFICIARY
+      </span>
+      <div
+        class="arrow arrow-hidden arrow-up"
+        data-testid="arrow-for-BENEFICIARY"
+      />
+    </div>
+  </button><button
+    class="flex-grow-1"
+    data-testid="button-for-AMOUNT"
+  >
+    <div
+      class="flex"
+    >
+      <span>
+        AMOUNT
+      </span>
+      <div
+        class="arrow arrow-hidden arrow-up"
+        data-testid="arrow-for-AMOUNT"
+      />
+    </div>
+  </button>
+</app-sort>
+`;
