@@ -1,5 +1,8 @@
-import { createComponentFactory } from '@ngneat/spectator/jest';
-import { byText, Spectator } from '@ngneat/spectator';
+import {
+  createComponentFactory,
+  Spectator,
+  byText
+} from '@ngneat/spectator/jest';
 import { FormErrorsComponent } from './form-errors.component';
 import { FormControl } from '@angular/forms';
 describe('FormErrorsComponent', () => {

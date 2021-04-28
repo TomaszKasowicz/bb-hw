@@ -1,6 +1,8 @@
-import { createComponentFactory } from '@ngneat/spectator/jest';
-import { Spectator, byText, byTestId } from '@ngneat/spectator';
-
+import {
+  byTestId,
+  createComponentFactory,
+  Spectator
+} from '@ngneat/spectator/jest';
 import { SortComponent } from './sort.component';
 
 describe('SortComponent', () => {

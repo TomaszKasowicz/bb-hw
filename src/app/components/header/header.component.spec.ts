@@ -1,29 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
-    }).compileComponents();
-  }));
+  let spectator: Spectator<HeaderComponent>;
+  const createComponent = createComponentFactory(HeaderComponent);
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    spectator = createComponent();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator.component).toBeTruthy();
   });
 
   it('should render image', () => {
-    expect(fixture).toMatchInlineSnapshot(`
+    expect(spectator.fixture).toMatchInlineSnapshot(`
       <app-header
         __ngContext__={[Function LRootView]}
       >

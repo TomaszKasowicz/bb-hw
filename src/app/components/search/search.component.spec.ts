@@ -36,9 +36,7 @@ describe('SearchComponent', () => {
   });
 
   it('should emit change when input is filled', done => {
-    const input = spectator.fixture.debugElement.query(By.css('input'));
-    input.nativeElement.value = 'test';
-    input.nativeElement.dispatchEvent(new Event('input'));
+    spectator.typeInElement('test', 'input');
     spectator.detectChanges();
 
     expect(spectator.fixture).toMatchSnapshot();
@@ -46,20 +44,19 @@ describe('SearchComponent', () => {
       expect(value).toEqual('test');
       done();
     });
-    spectator.dispatchKeyboardEvent(input, 'keyup', 't');
+    spectator.dispatchKeyboardEvent('input', 'keyup', 't');
   });
 
   it('should clear searchText when Escape pressed', done => {
     spectator.component.searchText = 'test';
     spectator.detectChanges();
-    const input = spectator.fixture.debugElement.query(By.css('input'));
 
     spectator.component.searchTextChanged.subscribe(value => {
       expect(value).toEqual('');
       done();
     });
 
-    spectator.dispatchKeyboardEvent(input, 'keyup', 'Escape');
+    spectator.dispatchKeyboardEvent('input', 'keyup', 'Escape');
   });
 
   it('should clear searchText when X is clicked', done => {
