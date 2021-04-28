@@ -28,14 +28,10 @@ export interface ErrorMessages {
     `
   ]
 })
-export class FormErrorsComponent implements OnInit {
+export class FormErrorsComponent {
   @Input()
   public ctrl: AbstractControl | null;
 
   @Input()
   public errorMessages: ErrorMessages = {};
-
-  constructor() {}
-
-  ngOnInit() {}
 }

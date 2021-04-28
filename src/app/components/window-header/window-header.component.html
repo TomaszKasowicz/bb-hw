@@ -1,5 +1,5 @@
 <div class="flex window-header">
-  <img [src]="icon">
+  <img *ngIf="icon" [src]="icon">
   <div class="header-text">
     <ng-content></ng-content>
   </div>

@@ -22,8 +22,6 @@ export class SortComponent implements OnInit {
   @Output()
   public sortChange = new EventEmitter<SortState>();
 
-  constructor() {}
-
   ngOnInit(): void {
     this.sortChange.emit(this.state);
   }

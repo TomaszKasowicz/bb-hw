@@ -7,22 +7,22 @@ import { Transaction } from '../model/transaction';
   providedIn: 'root'
 })
 export class TransactionsService {
-  private _recentTransactions = new BehaviorSubject(mockData);
-  private _currentBalance = 5824.76;
+  private recentTransactions = new BehaviorSubject(mockData);
+  private currentBalance = 5824.76;
 
   getRecentTransactions() {
-    return this._recentTransactions.asObservable();
+    return this.recentTransactions.asObservable();
   }
 
   getCurrentBalance() {
-    return this._currentBalance;
+    return this.currentBalance;
   }
 
   submitTransaction(transaction: Transaction) {
     transaction.merchantLogo = this.findLogo(transaction);
-    this._currentBalance -= transaction.amount;
-    this._recentTransactions.next([
-      ...this._recentTransactions.value,
+    this.currentBalance -= transaction.amount;
+    this.recentTransactions.next([
+      ...this.recentTransactions.value,
       transaction
     ]);
   }
@@ -32,7 +32,7 @@ export class TransactionsService {
       return;
     }
     const { merchant } = transaction;
-    return this._recentTransactions.value.find(
+    return this.recentTransactions.value.find(
       t => t.merchant.localeCompare(merchant) === 0
     )?.merchantLogo;
   }

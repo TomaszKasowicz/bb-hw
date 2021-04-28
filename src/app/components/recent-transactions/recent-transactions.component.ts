@@ -30,8 +30,11 @@ export class RecentTransactionsComponent implements OnInit {
         this.filterTransactions(transactions, filterText)
       ),
       withLatestFrom(this.sort$),
-      map(([filteredTransactions, sort]) =>
-        this.sortTransactions(filteredTransactions, sort)
+      map(
+        ([filteredTransactions, sort]: [
+          fiteredTranactions: Transaction[],
+          sort: SortState
+        ]) => this.sortTransactions(filteredTransactions, sort)
       )
     );
   }

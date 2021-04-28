@@ -53,17 +53,17 @@ export class TransactionFormComponent implements OnInit {
     this.ctrlAmount = this.transferForm.get('amount');
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.resetForm();
     this.disabled$ = defer(() => this.transferForm.statusChanges).pipe(
-      map(status => status === 'INVALID'),
+      map((status: string) => status === 'INVALID'),
       startWith(true)
     );
 
     this.merchants$ = this.transactionService.getRecentTransactions().pipe(
-      map(transactions => transactions.map(t => t.merchant)),
-      map(merchants => new Set(merchants)),
-      map(set => [...set.values()])
+      map((transactions: Transaction[]) => transactions.map(t => t.merchant)),
+      map((merchants: string[]) => new Set(merchants)),
+      map((set: Set<string>) => [...set.values()])
     );
   }
 
@@ -78,7 +78,7 @@ export class TransactionFormComponent implements OnInit {
     this.transferForm.get('from')?.disable();
   }
 
-  private getFromValue() {
+  private getFromValue(): string {
     return `Free Checking(4962) - $${Number(
       this.transactionService.getCurrentBalance()
     ).toFixed(2)}`;
