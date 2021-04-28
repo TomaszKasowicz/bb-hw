@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionDetailsComponent Should Render Details with logo 1`] = `
+<app-transaction-details
+  __ngContext__={[Function LRootView]}
+  transaction={[Function Object]}
+>
+  <div
+    class="category"
+    style="background-color: rgb(18, 52, 86);"
+  /><div
+    class="item date"
+  >
+    Apr. 27
+  </div><div
+    class="item logo"
+  >
+    <img
+      alt=""
+      src="Logo"
+    />
+    
+  </div><div
+    class="item details"
+  >
+    <div>
+       merchant 
+    </div>
+    <div>
+       Transaction 
+    </div>
+  </div><div
+    class="item amount"
+  >
+    -$123.45
+  </div>
+</app-transaction-details>
+`;
+
+exports[`TransactionDetailsComponent Should Render Details without logo 1`] = `
+<app-transaction-details
+  __ngContext__={[Function LRootView]}
+  transaction={[Function Object]}
+>
+  <div
+    class="category"
+    style="background-color: rgb(18, 52, 86);"
+  /><div
+    class="item date"
+  >
+    Apr. 27
+  </div><div
+    class="item logo"
+  >
+    
+  </div><div
+    class="item details"
+  >
+    <div>
+       merchant 
+    </div>
+    <div>
+       Transaction 
+    </div>
+  </div><div
+    class="item amount"
+  >
+    -$123.45
+  </div>
+</app-transaction-details>
+`;
