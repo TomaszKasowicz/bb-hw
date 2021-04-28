@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecentTransactionsComponent } from './recent-transactions.component';
@@ -8,9 +9,9 @@ describe('RecentTransactionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecentTransactionsComponent ]
-    })
-    .compileComponents();
+      declarations: [RecentTransactionsComponent],
+      schemas: [NO_ERRORS_SCHEMA] // TODO: Remove this once tests are updated
+    }).compileComponents();
   }));
 
   beforeEach(() => {

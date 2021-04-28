@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { WindowHeaderComponent } from '../window-header/window-header.component';
 
 import { TransactionDetailsComponent } from './transaction-details.component';
 
@@ -8,9 +9,8 @@ describe('TransactionDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TransactionDetailsComponent ]
-    })
-    .compileComponents();
+      declarations: [TransactionDetailsComponent, WindowHeaderComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
