@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentTransactionsComponent Transaction Filtering Should render all transactions when filter is empty 1`] = `
+<app-recent-transactions
+  __ngContext__={[Function LRootView]}
+  filter$={[Function BehaviorSubject]}
+  sort$={[Function BehaviorSubject]}
+  transactions$={[Function Observable]}
+  transactionsService={[Function Object]}
+>
+  <app-window-header>
+     Recent Transactions
+  
+  </app-window-header><div
+    class="flex user-menu"
+  >
+    <app-search />
+    <app-sort />
+  </div><div
+    class="transaction-list"
+  >
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-The Tea Lounge"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-Texaco"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-The Tea Lounge"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-Amazon Online Store"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-7-Eleven"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-H&M Online Store"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-Jerry Hildreth"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-Lawrence Pearson"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-Whole Foods"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-Southern Electric Company"
+    />
+    
+  </div>
+</app-recent-transactions>
+`;
+
+exports[`RecentTransactionsComponent Transaction Filtering Should render filtred transactions 1`] = `
+<app-recent-transactions
+  __ngContext__={[Function LRootView]}
+  filter$={[Function BehaviorSubject]}
+  sort$={[Function BehaviorSubject]}
+  transactions$={[Function Observable]}
+  transactionsService={[Function Object]}
+>
+  <app-window-header>
+     Recent Transactions
+  
+  </app-window-header><div
+    class="flex user-menu"
+  >
+    <app-search />
+    <app-sort />
+  </div><div
+    class="transaction-list"
+  >
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-The Tea Lounge"
+    />
+    <app-transaction-details
+      class="flex"
+      data-testid="merchant-The Tea Lounge"
+    />
+    
+  </div>
+</app-recent-transactions>
+`;
+
+exports[`RecentTransactionsComponent should render empty list of transactions 1`] = `
+<app-recent-transactions
+  __ngContext__={[Function LRootView]}
+  filter$={[Function BehaviorSubject]}
+  sort$={[Function BehaviorSubject]}
+  transactions$={[Function Observable]}
+  transactionsService={[Function Object]}
+>
+  <app-window-header>
+     Recent Transactions
+  
+  </app-window-header><div
+    class="flex user-menu"
+  >
+    <app-search />
+    <app-sort />
+  </div><div
+    class="transaction-list"
+  >
+    
+  </div>
+</app-recent-transactions>
+`;

@@ -6,5 +6,6 @@
   <app-sort (sortChange)="setSorting($event)"></app-sort>
 </div>
 <div class="transaction-list">
-  <app-transaction-details class="flex" *ngFor="let transaction of transactions$ | async as list" [transaction]="transaction"></app-transaction-details>
+  <app-transaction-details class="flex" *ngFor="let transaction of transactions$ | async as list" [transaction]="transaction"
+  [attr.data-testid]="'merchant-' + transaction.merchant"></app-transaction-details>
 </div>

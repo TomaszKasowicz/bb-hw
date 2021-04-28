@@ -36,6 +36,4 @@ export class TransactionsService {
       t => t.merchant.localeCompare(merchant) === 0
     )?.merchantLogo;
   }
-
-  constructor() {}
 }
