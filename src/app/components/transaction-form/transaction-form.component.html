@@ -6,19 +6,13 @@
   <label class="bold" for="from">FROM ACCOUNT</label>
   <input id="from" type="text" formControlName="from">
   <label class="bold"for="to">TO ACCOUNT</label>
-  <div class="error" *ngIf="ctrlTo?.dirty && ctrlTo?.errors?.required">
-    Benficiary is required.
-  </div>
+  <app-form-errors [ctrl]="transferForm.get('to')" [errorMessages]="beneficiaryErrroMessages"></app-form-errors>
   <input id="to" type="text" formControlName="to" list="merchants" autocomplete="off">
   <datalist id="merchants">
     <option *ngFor="let merchant of merchants$ | async">{{merchant}}</option>
   </datalist>
   <label class="bold" for="amount">AMOUNT</label>
-  <div class="error" *ngIf="ctrlAmount?.dirty && ctrlAmount?.errors">
-    <div *ngIf="ctrlAmount?.errors?.required">Amount is required</div>
-    <div *ngIf="ctrlAmount?.errors?.pattern">Fixed number (ie 123 or 123.45)</div>
-    <div *ngIf="ctrlAmount?.errors?.balanceOverdraft">Will overdraft</div>
-  </div>
+  <app-form-errors [ctrl]="transferForm.get('amount')" [errorMessages]="amountErrorMessages"></app-form-errors>
   <div class="amount">
     <span class="prefix">$</span>    
     <input id="amount" type="text" formControlName="amount" placeholder="0.00" autocomplete="off">

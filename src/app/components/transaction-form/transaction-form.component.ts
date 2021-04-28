@@ -9,6 +9,7 @@ import { defer, Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Transaction } from '../../model/transaction';
 import { TransactionsService } from '../../services/transactions.service';
+import { ErrorMessages } from '../form-errors/form-errors.component';
 import { balanceValidator } from './balance.validator';
 
 @Component({
@@ -24,6 +25,16 @@ export class TransactionFormComponent implements OnInit {
 
   public disabled$: Observable<boolean>;
   public merchants$: Observable<string[]>;
+
+  public amountErrorMessages: ErrorMessages = {
+    required: 'Amount is required',
+    pattern: 'Fixed number (i.e. 123 or 123.45)',
+    balanceOverdraft: 'Will overdraft'
+  };
+
+  public beneficiaryErrroMessages: ErrorMessages = {
+    required: 'Beneficiary is required'
+  };
 
   constructor(
     private fb: FormBuilder,

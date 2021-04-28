@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormErrorsComponent Should not render any errors if control is dirty but valid 1`] = `
+<app-form-errors
+  __ngContext__={[Function LRootView]}
+  ctrl={[Function FormControl]}
+  errorMessages={[Function Object]}
+>
+  
+</app-form-errors>
+`;
+
+exports[`FormErrorsComponent Should not render any errors if control is pristine 1`] = `
+<app-form-errors
+  __ngContext__={[Function LRootView]}
+  ctrl={[Function FormControl]}
+  errorMessages={[Function Object]}
+>
+  
+</app-form-errors>
+`;
+
+exports[`FormErrorsComponent Should render error key when error message is not available 1`] = `
+<app-form-errors
+  __ngContext__={[Function LRootView]}
+  ctrl={[Function FormControl]}
+  errorMessages={[Function Object]}
+>
+  <div
+    class="error"
+  >
+     someError 
+  </div>
+</app-form-errors>
+`;
+
+exports[`FormErrorsComponent Should render message when ctrl has errors and error Message is available 1`] = `
+<app-form-errors
+  __ngContext__={[Function LRootView]}
+  ctrl={[Function FormControl]}
+  errorMessages={[Function Object]}
+>
+  <div
+    class="error"
+  >
+     Some Error Message 
+  </div>
+</app-form-errors>
+`;

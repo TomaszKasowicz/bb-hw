@@ -11,7 +11,7 @@ import { WindowHeaderComponent } from './components/window-header/window-header.
 import { SearchComponent } from './components/search/search.component';
 import { SortComponent } from './components/sort/sort.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormErrorsComponent } from './components/form-errors/form-errors.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TransactionDetailsComponent,
     WindowHeaderComponent,
     SearchComponent,
-    SortComponent
+    SortComponent,
+    FormErrorsComponent
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule],
   providers: [],
