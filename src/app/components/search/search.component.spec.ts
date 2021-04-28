@@ -1,8 +1,6 @@
-import { DebugElement } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { Spectator, createKeyboardEvent } from '@ngneat/spectator';
-import { createComponentFactory } from '@ngneat/spectator/jest';
+import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { SearchComponent } from './search.component';
 
 describe('SearchComponent', () => {

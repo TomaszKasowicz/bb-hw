@@ -60,9 +60,11 @@ export class TransactionFormComponent implements OnInit {
       startWith(true)
     );
 
-    this.merchants$ = this.transactionService
-      .getRecentTransactions()
-      .pipe(map(transactions => transactions.map(t => t.merchant)));
+    this.merchants$ = this.transactionService.getRecentTransactions().pipe(
+      map(transactions => transactions.map(t => t.merchant)),
+      map(merchants => new Set(merchants)),
+      map(set => [...set.values()])
+    );
   }
 
   private resetForm() {

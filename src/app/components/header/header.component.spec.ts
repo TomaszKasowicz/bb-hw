@@ -21,4 +21,18 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render image', () => {
+    expect(fixture).toMatchInlineSnapshot(`
+      <app-header
+        __ngContext__={[Function LRootView]}
+      >
+        <header>
+          <img
+            src="./assets/logo.jpg"
+          />
+        </header>
+      </app-header>
+    `);
+  });
 });

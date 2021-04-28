@@ -1,0 +1,1029 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionFormComponent Form Errors Should render that Amount is required 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-invalid ng-dirty"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      <div
+        class="error"
+      >
+         Amount is required 
+      </div>
+      
+      
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-dirty ng-invalid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Errors Should render that Amount should be a fixed number 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-invalid ng-dirty"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      <div
+        class="error"
+      >
+         Fixed number (i.e. 123 or 123.45) 
+      </div>
+      
+      
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-invalid ng-dirty"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Errors Should render that Amount will overdraft account balance 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-invalid ng-dirty"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      <div
+        class="error"
+      >
+         Will overdraft 
+      </div>
+      
+      
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-invalid ng-dirty"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Errors Should render that Beneficiary is required 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-invalid ng-dirty"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      <div
+        class="error"
+      >
+         Beneficiary is required 
+      </div>
+      
+      
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-dirty ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-pristine ng-invalid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Submission Should Enable Submit Button when beneficiary is filled and ammount is filled 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-dirty ng-touched ng-valid"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-dirty ng-valid ng-touched"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-dirty ng-valid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Submission Should Reset Form when cancel is clicked 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-pristine ng-invalid"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-pristine ng-invalid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Submission Should Send Transfer when transfer button is clicked 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-pristine ng-invalid"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-pristine ng-invalid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Form Submission Should disable form controls and render cancel/transfer buttons when submit clicked 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview={[Function Boolean]}
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-dirty ng-touched"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-dirty ng-touched"
+      disabled=""
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-dirty"
+        disabled=""
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+      >
+        CANCEL
+      </button>
+      <button
+        class="peachtree"
+      >
+        TRANSFER
+      </button>
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Should Render Merchant options retrieved from recent transactions 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-pristine ng-invalid"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      <option>
+        a
+      </option>
+      <option>
+        b
+      </option>
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-pristine ng-invalid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
+
+exports[`TransactionFormComponent Should render clean form without any options 1`] = `
+<app-transaction-form
+  __ngContext__={[Function LRootView]}
+  amountErrorMessages={[Function Object]}
+  beneficiaryErrroMessages={[Function Object]}
+  ctrlAmount={[Function FormControl]}
+  ctrlTo={[Function FormControl]}
+  disabled$={[Function Observable]}
+  fb={[Function FormBuilder]}
+  isReview="false"
+  merchants$={[Function Observable]}
+  transactionService={[Function Object]}
+  transferForm={[Function FormGroup]}
+>
+  <app-window-header>
+     Make a Transfer
+  
+  </app-window-header><form
+    class="flex flex_column transfer-form ng-untouched ng-pristine ng-invalid"
+    novalidate=""
+  >
+    <label
+      class="bold"
+      for="from"
+    >
+      FROM ACCOUNT
+    </label>
+    <input
+      class="ng-untouched ng-pristine"
+      disabled=""
+      formcontrolname="from"
+      id="from"
+      type="text"
+    />
+    <label
+      class="bold"
+      for="to"
+    >
+      TO ACCOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <input
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="to"
+      id="to"
+      list="merchants"
+      type="text"
+    />
+    <datalist
+      id="merchants"
+    >
+      
+    </datalist>
+    <label
+      class="bold"
+      for="amount"
+    >
+      AMOUNT
+    </label>
+    <app-form-errors>
+      
+    </app-form-errors>
+    <div
+      class="amount"
+    >
+      <span
+        class="prefix"
+      >
+        $
+      </span>
+      <input
+        autocomplete="off"
+        class="ng-untouched ng-pristine ng-invalid"
+        formcontrolname="amount"
+        id="amount"
+        placeholder="0.00"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex buttons"
+    >
+      <button
+        class="peachtree"
+        disabled=""
+      >
+        SUBMIT
+      </button>
+      
+      
+    </div>
+    
+  </form>
+</app-transaction-form>
+`;
